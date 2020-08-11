@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang = "en">
+
+    <head>
+        <!--meta tags-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+        <link rel="stylesheet" href="CSS/styl.css">
+        <link rel="stylesheet" href="CSS/response.css">
+
+        <!--google font css-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" >
+        <!--font awesome css-->
+        <link rel="stylesheet" href="CSS/all.min.css" >
+        <!--wow css-->
+        <link rel="stylesheet" href="CSS/animate.css" >
+
+        <title>W4cast | Weather</title>
+    </head>
+
+    <body>
+
+        <!--start navigation bar-->
+        <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light-pink margin-5px-all">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/ip2_Logo_sm.png" alt="W4cast Logo" class="c-logo margin-50px-left">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class=" navbar-nav nav-bar-list topnav" id="myTopnav">
+                    <li class="nav-item list-ip2 "><a class="monospace1-font" href="weather.html">Weather</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="earthquake.html">Earthquakes</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="covid.html">COVID-19</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="population.html">Population</a></li>  
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="geojson.html">GeoJson</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="team.html">Our Team </a></li>
+                </ul>
+            </div>
+        </nav>
+    <!--end navigation bar-->
+ 
+    <!--start body content-->
+    <section id="weather" class="img-fluid margin-5px-top margin-5px-left margin-5px-right no-margin-bottom padding-3px-bottom" alt="Responsive image">
+
+        <p class="header-title helvetica-font header-text-size">Earthquake Map</p>
+
+        <!--start first section-->
+        <section class="text-center">
+            <div class="flex-box-row" id="map-section">
+                <div id="Map-area" class="zoom"> THE MAP API WILL BE HERE</div>
+        
+                <div id="map-selection">
+                    <form action="">
+                        <label for="Period" class="oswald-text header-title">Choose a Period</label> <br>
+                        <select name="period" id="period">
+                        <option value="volvo">Past Hour</option>
+                        <option value="saab">Past Day</option>
+                        <option value="opel">Past Week</option>
+                        
+                        </select>
+                        <br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                    
+                </div>
+                <div id="Map-explanation-text-box" class="oswald-text"> <i>Variable Text <br> about the map appears here <br>according to what user chooses </i></div>
+            </div>
+        </section>
+        <!--end first section-->
+
+        <!--start second section-->
+        <section class="margin-five-top">
+            <p class="text-white oswald-text middle-size-text text-center">How To Prepare Your Household<p>
+            <div class="row">
+                <div class="col-md-4">
+                        <p class="text-white"> Check for Hazards </p>
+                        <p class="text-white">Fasten Shelves </p> 
+                </div>
+
+                <div class="col-md-4">
+                    <p class="text-white">Identify Safe Places To Hide</p>
+                    <p class="text-white">Educate Yourself and Family Members</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="text-white">Have Disaster Supplies on Hand</p>
+                    <p class="text-white">Develop an Emergency Communication Plan</p>
+                </div>
+            </div>
+
+        </section>
+     
+  
+ 
+
+    <!--end body content-->
+
+   <!--start footer-->
+    <footer>
+        <div class="social-media-icons social-icon-style-4 text-center padding-two-bottom padding-one-top">
+            <ul class="small-icon">
+                <li class="padding-10px-lr"><a class="facebook text-white " href="https://web.facebook.com/xtaecee.teez?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f no-padding"></i></a></li>
+                <li class="padding-10px-lr"><a class="instagram text-white" href="https://www.instagram.com/_obiero/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="padding-10px-lr"><a class="twitter text-white" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+            <p class="text-white monospace-font padding-5px-bottom"> &copy ISIBO. All Rights Reserved. 2020 </p>
+    </footer>
+    <!--end footer-->
+   
+<!--bootstrap-->
+<script type="text/javascript" src="JS/jquery-slim.min.js"></script>
+<script type="text/javascript" src="JS/popper.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+<!--font awesome-->
+<script type="text/javascript" src="JS/all.min.js"></script>
+<!--wow-->
+<script type="text/javascript" src="JS/wow.min.js"></script>
+
+
+</body>
+</html>

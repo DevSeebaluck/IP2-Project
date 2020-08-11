@@ -1,0 +1,844 @@
+/************************HEADER BACKGROUNDS*****************************************************/
+
+header
+{
+  width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-top: -100px;
+}
+
+#overview-Header
+{
+       
+        background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)) ,url(../images/overviewHeader.jpg);        
+}
+#geoJson-Header
+{
+      
+     background-color: white;
+     width: 100%;        
+}
+#team-Header
+{
+        
+        background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.8)) ,url(../images/team-header-img.jpg);        
+}
+
+#earthquake-Header
+{
+  
+  background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.8)) ,url(../images/earthquake.jpg);
+}
+
+#weather-Header
+{
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)) , url(../images/woman-rainy.png);
+}
+
+#info-Header
+{
+  background-image: url(../images/mother.jpg);
+}
+#corona-Header
+{
+  background-image: url(../images/mask.jpg);
+}
+#population-Header
+{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(../images/population-header.jpg);
+}
+
+/*..................NAVIGATION BAR.............................................*/
+
+.main-nav-bar
+{
+display: flex;
+background-color: pink;
+position: relative;
+z-index: 7;
+}
+
+
+.nav-bar-list
+{
+list-style-type: none;
+margin-left: 20px;
+padding: 0;
+/*overflow: scroll;*/
+
+}
+
+.nav-bar-list a
+{
+text-decoration: none;
+color: black;
+}
+
+.nav-bar-list a:active {
+color: rgb(200, 28, 134);
+  }
+
+.nav-bar-list a:hover {
+  background-color: rgb(200, 28, 134);
+  color: black;
+  text-decoration: none;
+}
+
+/*li
+{
+    display: inline;
+    padding: 30px;
+    font-size: 20px;
+}*/
+
+li a:hover
+{
+    transform: scale(5.7);
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+}
+
+.main-logo
+{
+    width: 90px;
+    height: 70px;
+}
+
+
+
+/*********************************************POPUP BOX*******************************************/
+
+body
+{
+  user-select: none;
+}
+
+.center, .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.content
+{
+  opacity: 0;
+  visibility: hidden;
+  width: 400px;
+  height: 350px;
+  background: white;
+  border-radius: 3px;
+  transition: .3s ease-in;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.4);
+}
+
+#click:checked ~ .content
+{
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-header
+{
+  height: 68px;
+  background: hotpink;
+  overflow: hidden;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+}
+
+.popup-header h2
+{
+  color: white;
+  padding-left: 32px;
+  font-weight: normal;
+}
+
+.fa-times
+{
+  position: absolute;
+  right: 20px;
+  top: 2opx;
+  color:hotpink;
+  font-weight: bold ;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fa-check
+{
+  font-size: 50px;
+  color: pink;
+  margin: 30px 0 0 160px;
+  height: 80px;
+  width: 80px;
+  border: 2px solid pink;
+  text-align: center;
+  padding-top: 12px;
+  border-radius: 50%;
+  margin: 30px 0 0 160px;
+  box-sizing: border-box;
+}
+
+.line
+{
+  bottom: 60px;
+  width: 100%;
+  height: 1px;
+  background: silver;
+}
+
+.close-btn
+{
+  position: absolute;
+  bottom: 12px;
+  right: 25px;
+  border: 1px solid pink;
+  border-radius: 3px;
+  color: pink;
+  padding: 8px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.close-btn:hover
+{
+  background: pink;
+  color: white;
+  transition: .5s;
+}
+
+#click
+{
+  display: none;
+}
+
+.click-me
+{
+  display: block;
+  width: 200px;
+  height: 80px;
+  background: hotpink;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .5s;
+  
+
+}
+
+.click-me:hover{
+  background: rgb(233, 36, 68);
+}
+
+/************************** TEXT STYLES*****************************************************************/
+.header-title
+{
+color: white;
+-webkit-animation:colorchange 20s infinite alternate;
+}
+@-webkit-keyframes colorchange {
+  0% {
+    
+    color: white;
+  }
+  
+  10% {
+    
+    color: #8e44ad;
+  }
+  
+  20% {
+    
+    color: pink;
+  }
+  
+  30% {
+    
+    color: #d35400;
+  }
+  
+  40% {
+    
+    color: hotpink;
+  }
+  
+  50% {
+    
+    color: white;
+  }
+  
+  60% {
+    
+    color: rgb(255, 192, 224);
+  }
+  
+  70% {
+    
+    color: pink;
+  }
+  80% {
+ 
+    color: rgb(194, 33, 87);
+  }
+  
+  90% {
+ 
+    color: pink;
+  }
+  
+  100% {
+    
+    color: white;
+  }
+}
+
+.oswald-text
+{
+    font-family: 'Oswald', sans-serif;
+}
+
+.open-sans-text
+{
+    font-family: 'Open Sans Condensed' , sans-serif;
+  
+}
+
+.middle-size-text
+{
+  font-size: 27px;
+}
+.large-size-text
+{
+  font-size: 120px;
+}
+.small-size-text
+{
+  font-size: 15px;
+}
+p
+{
+  text-align: center;
+}
+.text-white
+{
+color: white;
+}
+.text-pink
+{
+  color: pink;
+}
+
+/********************************************EFFECTS**************************************************/
+
+.zoom {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.761);
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+   
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  a:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    }
+
+    #more 
+    {
+      display: none;
+    }
+  /*********************************BOX STYLES**********************************************************/
+  #overview-text-box
+  {
+   background-color: rgba(255, 192, 203, 0.632);
+    margin: auto;
+    width: 90%;
+    padding: 25px;
+
+  }
+
+  #team-container
+  {
+  
+   margin: auto;
+    width: 90%;
+    height: 450px;
+  }
+  .person-box
+  {
+    width: 21%;
+    margin:2%;
+  }
+
+  #map-section
+  {
+    background-color: rgb(255, 105, 105);
+    width: 50%;
+    margin: auto;
+  }
+
+  #map-selection
+  {
+    padding: 20px;
+  }
+
+  .video-box
+  {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    margin: 5px;
+  }
+
+  #corona-container
+  {
+    width: 900px;
+    margin: auto;
+    background-color: pink;
+  }
+  .main-box
+  {
+    margin: 20px;
+   
+  }
+  .corona-data-box
+  {
+    height: 50px;
+    background-color: white;
+    font-family: 'Open Sans Condensed' , sans-serif;
+  }
+
+  #population-container-row
+  {
+    width: 60%;
+    height: 300px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 29px;
+  }
+
+   /******************************IMAGES**************************************************/
+  .person-image
+   {
+     width: 100%;
+     height: 200px;
+   }
+
+   .person-box-text
+   {
+     background-color: pink;
+     padding: 5%;
+     padding-top: 2%;
+     padding-bottom: 2%;
+   }
+
+   .large-img
+   {
+     width: 300px;
+     right:0;
+   }
+
+  /******************************ELEMENTS ARRANGEMENT**************************************************/
+  .flex-box-row
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+     
+  }
+  .flex-box-column
+  {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  #weather-container
+  {
+    width: 70%;
+    margin: auto;
+    
+  }
+  .flex-box-row{
+  /*  background-color: white; */
+  }
+  /***************************BUTTONS****************************************************************/
+
+  .btn-primary
+  {
+  background-color: pink;  
+  font-family: 'Open Sans Condensed' , sans-serif;
+  padding: 10px;
+  border: none;
+  
+  }
+
+  .json-button
+  {
+    margin: 10px;
+    height: 40px;
+    border: none;
+    background-color: pink;
+    font-size: 22px;
+  }
+
+  button a
+  {
+text-decoration: none;
+color: black;
+  }
+
+  .json-button:hover
+  {
+    transform: scale(1.2); 
+    background-color: rgb(234, 227, 232);
+  }
+
+  /*****************************FORMS*****************************************************************/
+  .form-text-box
+  {
+    font-family: 'Open Sans Condensed' , sans-serif;
+    padding: 10px;
+  }
+
+  /*********************************************BALL*********************************************/
+  #ballWrapper {
+    width: 140px;
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -150px 0 0 -70px;
+  }
+
+  #ball {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background: linear-gradient(top,  rgba(187,187,187,1) 0%,rgba(119,119,119,1) 99%);
+    box-shadow: inset 0 -5px 15px rgba(255,255,255,0.4), 
+          inset -2px -1px 40px rgba(0,0,0,0.4), 
+          0 0 1px #000;	
+  }
+
+  #ball::after {
+    content: "";
+    width: 80px; 
+    height: 40px; 
+    position: absolute;
+    left: 30px;
+    top: 10px;	
+    background: linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+    border-radius: 40px / 20px;	
+  }
+
+  #ballShadow {
+    width: 60px;
+    height: 75px;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px;
+    background: rgba(20, 20, 20, .1);
+    box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+    border-radius: 30px / 40px;	
+  }
+
+  #ball {
+    animation: jump 1s infinite;
+  }
+
+  @keyframes jump {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 140px;
+      height: 140px;
+    }
+    55% {
+      top: 160px; 
+      height: 120px; 
+      border-radius: 70px / 60px;
+    }
+    65% {
+      top: 120px; 
+      height: 140px; 
+      border-radius: 70px;
+    }
+    95% {
+      top: 0;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  #ballShadow {
+    animation: shrink 1s infinite;
+  }
+
+  @-keyframes shrink {
+    0% {
+      bottom: 0;
+      margin-left: -30px;
+      width: 60px;
+      height: 75px;
+      background: rgba(20, 20, 20, .1);
+      box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+      border-radius: 30px / 40px;
+    }
+    50% {
+      bottom: 30px;
+      margin-left: -10px;
+      width: 20px;
+      height: 5px;
+      background: rgba(20, 20, 20, .3);
+      box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+      border-radius: 20px / 20px;
+    }
+    100% {
+      bottom: 0;
+      margin-left: -30px;
+      width: 60px;
+      height: 75px;
+      background: rgba(20, 20, 20, .1);
+      box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+      border-radius: 30px / 40px;
+    }
+  }
+
+  #ballWrapper {
+    transform: scale(1);
+    transition: all 5s linear 0s;
+  }
+  
+  #ballWrapper:active {
+    transform: scale(0);
+  }
+
+  /*****************************8ROTATING TEXT HEADERS**************************************************/
+
+  .rotatingText {
+    
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .rotatingText-adjective {
+    font-size: 30px;
+    left: 0;
+    margin-bottom: 0;
+    margin-top: 250px;
+    color:white;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+  }
+
+.rotatingText
+{
+  animation-iteration-count: 7;
+}
+  
+  .rotatingText-adjective:nth-of-type(1) {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-delay: 1s;
+  }
+  
+  .rotatingText-adjective:nth-of-type(2) {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-delay: 3.5s;
+  }
+  
+  .rotatingText-adjective:nth-of-type(3) {
+    animation-name: rotate-last;
+    animation-duration: 3;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes rotate {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    
+    20%, 80% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    100% {
+      opacity: 0;
+      transform: translate3d(0, -25px, 0);
+    }
+  }
+  
+  @keyframes rotate-last {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    
+    50%, 100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  /*************************************************GRAPH*********************************************/
+  .corona-graph-area
+  {
+    width: 450px;
+    height: 350px;
+    margin: 20px;
+    background-color: white;
+    border: black;
+  }
+
+  #corona-graph-container
+  {
+    margin: auto;
+    width: 1000px;
+    
+  }
+
+ 
+
+
+/******************************************TEAM-PAGE CONTACT US PAGE****************************************************************************/
+
+#contact-button
+{
+  background: pink;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+}
+
+
+.container 
+{
+    height: 100%;
+    width:100%;
+    background-image: url("images/singapore-river-255116_1920.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;    
+}
+.container-box
+{
+	display:inline-block; 
+	padding:10px; 
+	background: pink;
+	border: 1px solid #fff;	
+	position: fixed;
+  	top: 55%;
+  	left: 0;
+
+}
+
+#btnContactUs
+{
+  background: pink;
+  color: #000;
+  border: none;
+}
+
+
+.modal-content
+{
+	background: pink;	
+}
+
+#myModal
+{
+  background-color: pink;
+}
+.rotated
+{
+	-moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform-origin: top left;  
+}
+
+  /*************************************************GRAPH*********************************************/
+  .corona-graph-area
+  {
+    width: 450px;
+    height: 350px;
+    margin: 20px;
+    background-color: white;
+    border: black;
+  }
+
+  #corona-graph-container
+  {
+    margin: auto;
+    width: 1000px;
+    
+  }
+
+ /**************************************************FOOTER*********************************************************/
+ footer
+ {
+   background-color: black;
+ }
+
+ #social-media-icons
+ {
+   width: 25%;
+   margin: auto;
+ }
+ .social-media-icons
+{
+ 
+   height: 30px;;
+  
+   margin: 10px;
+}
+
+/*********************************************Earthquake selection navigation*****************************/
+.earthquake-selections{
+  width: 40%;
+  float: right;
+  background-color: rgb(255, 105, 105);
+  margin-right: 780px;
+  position: left;
+}
+
+
+.earthquake-selections ul{
+  color: #F1F9FF;
+}
+
+.earthquake-selections li{
+  color: #F1F9FF;
+}
+
+.earthquake-selections li:hover {
+  color: #000;
+}
+
+.earthquake-selections h3{
+  color: #000;
+}

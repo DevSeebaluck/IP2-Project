@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang = "en">
+
+    <head>
+        <!--meta tags-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+        <link rel="stylesheet" href="CSS/styl.css">
+        <link rel="stylesheet" href="CSS/response.css">
+
+        <!--google font css-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" >
+        <!--font awesome css-->
+        <link rel="stylesheet" href="CSS/all.min.css" >
+        <!--wow css-->
+        <link rel="stylesheet" href="CSS/animate.css" >
+        <!--covid-19-->
+        <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+        <title>W4cast | Home Page</title>
+    </head>
+
+    <body>
+    <!--start navigation bar-->
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light-pink margin-5px-all">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/ip2_Logo_sm.png" alt="W4cast Logo" class="c-logo margin-50px-left">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+       
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class=" navbar-nav nav-bar-list">
+                <li class="nav-item list-ip2 "><a class="monospace1-font" href="weather.html">Weather</a></li>
+                <li class="nav-item list-ip2"><a class="monospace1-font" href="earthquake.html">Earthquakes</a></li>
+                <li class="nav-item list-ip2"><a class="monospace1-font" href="covid.html">COVID-19</a></li>
+                <li class="nav-item list-ip2"><a class="monospace1-font" href="population.html">Population</a></li>  
+                <li class="nav-item list-ip2"><a class="monospace1-font" href="geojson.html">GeoJson</a></li>
+                <li class="nav-item list-ip2"><a class="monospace1-font" href="team.html">Our Team </a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--end navigation bar-->
+
+     <!--................................................................--> 
+   
+     <section id="covid-19" class="img-fluid margin-5px-top margin-5px-left margin-5px-right no-margin-bottom padding-3px-bottom" alt="Responsive image">
+        <p class="header-title helvetica-font header-text-size">COVID-19</p>
+        <div class="flex-box-row" id="corona-container">
+            
+       <div class="main-box"><div id="cases" class="oswald-text middle-size-text">Total Corona Cases</div>
+       <div class="corona-data-box" id="cases-corona-data-box">
+           <p><span id="tots"></span><br></p>
+       </div>
+       
+       <script>
+       
+ 
+         const api_url = 'https://api.covid19api.com/world/total'
+         async function getTotals() {
+             const response = await fetch(api_url);
+             const data = await response.json();
+             const { TotalConfirmed, TotalDeaths, TotalRecovered } = data;
+             document.getElementById('tots').textContent= TotalConfirmed;
+             document.getElementById('deaths').textContent= TotalDeaths;
+             document.getElementById('recover').textContent= TotalRecovered;
+             
+         }
+         getTotals();
+       </script>
+     </div>
+       <div class="main-box"><div id="Succumb" class="oswald-text middle-size-text">People Succubed to Corona</div>
+       <div class="corona-data-box" id="cases-corona-data-box">
+           <p><span id="deaths"></span><br></p>
+       </div>
+     </div>
+       <div class="main-box"><div id="Recovered" class="oswald-text middle-size-text">Total Recovered Cases</div>
+       <div class="corona-data-box" id="cases-corona-data-box">
+           <p><span id="recover"></span><br></p>
+       </div></div>
+     </div>
+ 
+     <section class="col-md-12 text-center" id="corona-graph-container">
+     <div class="corona-graph-area"> <p class="oswald-text"></p> 
+         <span id="chart-one"></span>
+     </div>
+     <script>
+         /**ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];**/
+         
+     
+         var requestOptions = {
+           method: 'GET',
+           redirect: 'follow'
+         };
+      
+         const url = "https://api.covid19api.com/summary";
+      
+         fetch(url, requestOptions)
+           .then(response => {
+             if (!response.ok) {
+               throw new Error(response.text);
+             }
+             return response.json();
+           })
+           .then(result => {
+             const totals = result.Countries;
+             let totalData = [];
+             totals.forEach(function(total) {
+               totalData.push([total.Country, total.TotalDeaths]);
+             });
+             const chartOneData = {
+               type: "bar",
+               title: {
+                 text: "Total Deaths per country",
+                 adjustLayout: true
+               },
+               tooltip: {
+                 text: 'Country: %kt<br>Deaths: %vvcm'
+               },
+               scaleX: {
+                 label: {
+                   text: 'Countries'
+                 },
+                 item: {
+                   angle: '-45'
+                 }
+               },
+               scaleY: {
+                 label: {
+                   text: 'Number of Deaths'
+                 }
+               },
+               series: [{
+                 values: totalData
+                } ],
+     
+               plotarea: {
+                 margin: 'dynamic'
+               }
+             };
+             zingchart.render({
+               id: "chart-one",
+               data: chartOneData,
+               height: "60%",
+               width: "60%"
+             });
+           })
+           .catch(err => {
+             console.log("Error Getting Data From API", err);
+           });
+       </script>
+     </section>
+    
+    </section>
+
+    <!--start footer-->
+    <footer>
+        <div class="social-media-icons social-icon-style-4 text-center padding-two-bottom padding-one-top">
+            <ul class="small-icon">
+                <li class="padding-10px-lr"><a class="facebook text-white " href="https://web.facebook.com/xtaecee.teez?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f no-padding"></i></a></li>
+                <li class="padding-10px-lr"><a class="instagram text-white" href="https://www.instagram.com/_obiero/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="padding-10px-lr"><a class="twitter text-white" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+            <p class="text-white monospace-font padding-5px-bottom"> &copy ISIBO. All Rights Reserved. 2020 </p>
+    </footer>
+    <!--end footer-->
+   
+<!--bootstrap-->
+<script type="text/javascript" src="JS/jquery-slim.min.js"></script>
+<script type="text/javascript" src="JS/popper.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+<!--font awesome-->
+<script type="text/javascript" src="JS/all.min.js"></script>
+<!--wow-->
+<script type="text/javascript" src="JS/wow.min.js"></script>
+
+</body>
+</html>

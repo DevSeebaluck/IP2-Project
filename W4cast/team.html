@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang = "en">
+
+    <head>
+        <!--meta tags-->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+        <link rel="stylesheet" href="CSS/styl.css">
+        <link rel="stylesheet" href="CSS/response.css">
+
+        <!--google font css-->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" >
+        <!--font awesome css-->
+        <link rel="stylesheet" href="CSS/all.min.css" >
+        <!--wow css-->
+        <link rel="stylesheet" href="CSS/animate.css" >
+
+        <title>W4cast | Home Page</title>
+    </head>
+
+    <body>
+     <!--start navigation bar-->
+        <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light-pink margin-5px-all">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/ip2_Logo_sm.png" alt="W4cast Logo" class="c-logo margin-50px-left">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+           </button>
+           
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class=" navbar-nav nav-bar-list">
+                    <li class="nav-item list-ip2 "><a class="monospace1-font" href="weather.html">Weather</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="earthquake.html">Earthquakes</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="covid.html">COVID-19</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="population.html">Population</a></li>  
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="geojson.html">GeoJson</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="team.html">Our Team </a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--end navigation bar-->
+        
+        <!--start body content-->
+        <section id="team" class="img-fluid margin-5px-top margin-5px-left margin-5px-right " alt="Responsive image">
+            <p class="header-title helvetica-font header-text-size wow bounceIn" data-wow-duration="1s" data-wow-delay="1s" data-wow-iteration="1">Team</p>
+
+            <P class="text-white open-sans-text">“Never doubt that a small group of thoughtful, committed, citizens can change the world. Indeed, it is the only thing that ever has.” ~ Margaret Mead</P>
+   
+            <div class="container margin-one-all">
+            <div class="row" id="">
+     
+             <div class="col-md-3 alt-font ">
+                 <div class="person-box-image"> <img src="images/dev.jpg" class="person-image" alt="Stacy"></div>
+                 <div class="person-box-text">
+                    <b class="oswald-text"> Dev</b> <br>
+                    <p class="text-left margin-5px-top">A 22-year-old computer science student at African Leadership College in Mauritius. He is fond of Artificial Intelligence and Architecture.</p>
+                 </div>
+             </div>
+     
+            <div class=" col-md-3 alt-font">
+             <div class="person-box-image"> <img src="images/Stacy-img2.jpg" class="person-image" alt="Stacy"></div>
+             <div class="person-box-text">
+                <b class="oswald-text"> Stacy</b>
+                <p class="text-left margin-5px-top">Stacy is passionate about Women Empowerment through the avenue of Science Skills. She delights in technology, mentorship and Pan-Africanism.</p>
+             </div>
+         </div>
+     
+         <div class="col-md-3 alt-font">
+             <div class="person-box-image"> <img src="images/ambareen.jpg" class="person-image" alt="Stacy"></div>
+             <div class="person-box-text">
+                <b class="oswald-text"> Ambareen</b>
+                <p class="text-left margin-5px-top">She is aspired and driven to Machine Learning. She has a proven record of excellence in children caring to high-school teaching. </p>
+             </div>
+         </div>
+     
+         <div class="col-md-3 alt-font">
+             <div class="person-box-image"> <img src="images/Angel.jpg" class="person-image" alt="Stacy"></div>
+             <div class="person-box-text">
+                <b class="oswald-text"> Angel</b>
+                <p class="text-left margin-5px-top">Angel is passionate about Women Empowerment through Education & Research, interning at Looka, a market research firm specializing on Africans.</p>
+             </div>
+         </div>
+        </div>
+    </div>
+     
+         <!--start contact us form-->
+         <div class="container-box rotated">
+             <button type="button" class="btn btn-info btn-lg turned-button" data-toggle="modal" data-target="#myModal"  id="contact-button">Contact Us</button>
+        </div>
+             
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        
+                            <h4 class="modal-title oswald-text">Contact Us</h4>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form role="form" method="post" id="reused_form" >
+                        <p class="monospace-font">We love hearing from you! Let us know how we can collaborate</p>
+                
+                        <div class="form-group">
+                            <label for="name" class="oswald-text">
+                                Name:</label>
+                            <input type="text" class="form-control"
+                            id="name" name="name"   required maxlength="50">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="oswald-text">
+                                Email:</label>
+                            <input type="email" class="form-control"
+                            id="email" name="email" required maxlength="50">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name" class="oswald-text">
+                                Message:</label>
+                            <textarea class="form-control" type="textarea" name="message"
+                            id="message" placeholder="Your Message Here"
+                            maxlength="6000" rows="7"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-success btn-block helvetica-font" id="btnContactUs">Post It! →</button>
+                        </form>
+
+                        <div id="success_message" style="width:100%; height:100%; display:none; ">
+                            <h3>Sent your message successfully!</h3>
+                        </div>
+
+                        <div id="error_message"
+                        style="width:100%; height:100%; display:none; ">
+                            <h3>Error</h3>
+                            Sorry there was an error sending your form.
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+             <!--end contact us form-->
+
+        
+        <!--end body content-->
+
+
+    <!--start footer-->
+    <footer class="margin-5px-left margin-5px-right">
+        <div class="social-media-icons social-icon-style-4 text-center padding-two-bottom padding-one-top">
+            <ul class="small-icon">
+                <li class="padding-10px-lr"><a class="facebook text-white " href="https://web.facebook.com/xtaecee.teez?ref=bookmarks" target="_blank"><i class="fab fa-facebook-f no-padding"></i></a></li>
+                <li class="padding-10px-lr"><a class="instagram text-white" href="https://www.instagram.com/_obiero/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="padding-10px-lr"><a class="twitter text-white" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+            <p class="text-white monospace-font padding-5px-bottom"> &copy ISIBO. All Rights Reserved. 2020 </p>
+    </footer>
+    <!--end footer-->
+</section>
+
+    <Script type="text/javascript" src="./JS/functions.js"></Script>
+   
+<!--bootstrap-->
+<script type="text/javascript" src="JS/jquery-slim.min.js"></script>
+<script type="text/javascript" src="JS/popper.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+<!--font awesome-->
+<script type="text/javascript" src="JS/all.min.js"></script>
+<!--wow-->
+<script type="text/javascript" src="JS/wow.min.js"></script> <script>new WOW().init();</script>
+
+
+</body>
+</html>
