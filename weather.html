@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>ISIbo.Weather</title>
+        <meta charset="utf-8" />
+<link rel="stylesheet" href="CSS/styl.css">
+<link rel="stylesheet" href="CSS/response.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src = weather.js></script>
+    </head>
+    <body>
+          <!--start navigation bar-->
+     <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light-pink margin-5px-all">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/ip2_Logo_sm.png" alt="W4cast Logo" class="c-logo margin-50px-left">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+           </button>
+           
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class=" navbar-nav nav-bar-list">
+                    <li class="nav-item list-ip2 "><a class="monospace1-font" href="weather.html">Weather</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="earthquake.html">Earthquakes</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="covid.html">COVID-19</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" </li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="geojson.html">GeoJson</a></li>
+                    <li class="nav-item list-ip2"><a class="monospace1-font" href="team.html">Our Team </a></li>
+                </ul>
+            </div>
+        </nav>
+         <!--end navigation bar-->
+     <!--................................................................--> 
+   
+   <header id="weather-Header">
+       <p class="header-title oswald-text large-size-text">Weather</p>
+
+       <div id="weather-container">
+        <div class="row">
+           <br><br><br>
+           <h3 class="text-center oswald-text text-pink middle-size-text"> Enter City Name </h3>
+           <span id="error"></span>
+        </div>
+   
+        <div class="row form-group form-inline" id="rowDiv">
+            <input type="text" name="City" id="city" class="form-control form-text-box middle-size-text" placeholder="City Name">
+        <button id="submitWeather" class="btn-primary middle-size-text">Search City</button>
+        </div>
+           
+  
+   
+   <div id="show">
+      
+   </div>
+    </div><br><br><br>
+   
+           
+     
+       <!-- the DIV that will contain the widget -->
+<div class="weatherWidget oswald-text" ></div>
+
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"PUBLIC_WIDGET_KEY", //lots of usage? Sign up for your personal key
+       location:"London, UK", //enter an addres
+       unitGroup:"metric", //"us" or "metric"
+       forecastDays:5, //how many days forecast to show
+       title:"London,UK", //optional title to show in the 
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+
+
+       <section id="overview-text-box">
+        <p class="open-sans-text middle-size-text"> The time to prepare for severe weather is when there isn't a cloud in the sky. Take a few minutes and put together a family survival plan. It'll help keep your loved ones and your home safe.
+        </p>
+    
+    </section><br><br>
+   </header>
+
+   <footer>
+  
+    <div id="social-media-icons">
+        <img src="images/FB-logo.png" alt="facebook" class="social-media-icons">
+        <img src="images/IG-logo.png" alt="Instagram" class="social-media-icons">
+        <img src="images/twitter-logo.png" alt="Twitter" class="social-media-icons">
+        <p class="text-white open-sans-text"> &copy Copyright ISIBO 2020</p>
+    </div>
+</footer>
+   
+</body>
+</html>
