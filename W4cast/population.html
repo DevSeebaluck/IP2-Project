@@ -48,7 +48,74 @@
         <p class="header-title helvetica-font header-text-size">Population</p>
 
         <section class="flex-box-row padding-ten-bottom" id="population-container-row">
-            <div class="open-sans-text middle-size-text"></div> Insert Graph of Men/Women Population</div>
+            <div class="open-sans-text middle-size-text"></div> Global Number of women that have experienced Gender Based violence</div>
+         <span id="mychart"></span>
+     
+     <script>
+      
+         
+     
+         var requestOptions = {
+           method: 'GET',
+           redirect: 'follow'
+         };
+      
+         const url = "https://apps.who.int/gho/athena/data/GHO/SDGIPV.json?profile=simple&filter=COUNTRY:*";
+      
+         fetch(url, requestOptions)
+           .then(response => {
+             if (!response.ok) {
+               throw new Error(response.text);
+             }
+             return response.json();
+           })
+           .then(result => {
+             const totals = result.Countries;
+             let totalData = [];
+             totals.forEach(function(total) {
+               totalData.push([total.Country, total.Value);
+             });
+             const myChartData = {
+               type: "bar",
+               title: {
+                 text: "Total number of GBV cases per country",
+                 adjustLayout: true
+               },
+               tooltip: {
+                 text: 'Country: %kt<br>Values: %vvcm'
+               },
+               scaleX: {
+                 label: {
+                   text: 'Countries'
+                 },
+                 item: {
+                   angle: '-45'
+                 }
+               },
+               scaleY: {
+                 label: {
+                   text: 'Number of Cases'
+                 }
+               },
+               series: [{
+                 values: totalData
+                } ],
+     
+               plotarea: {
+                 margin: 'dynamic'
+               }
+             };
+             zingchart.render({
+               id: "mychart",
+               data: myChartData,
+               height: "60%",
+               width: "60%"
+             });
+           })
+           .catch(err => {
+             console.log("Error", err);
+           });
+       </script>
     </section>
     <!--end body content-->
 
